@@ -1,0 +1,80 @@
+.calculator {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background: #6b6a6a;
+}
+
+.display {
+  height: 40px;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 24px;
+  background: #ffffff;
+  text-align: right;
+  border-radius: 5px;
+  line-height: 40px; /* Устанавливаем одинаковую высоту для выравнивания */
+  position: relative; /* Добавляем относительное позиционирование */
+}
+
+.cursor {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  animation: cursorBlink 1s infinite;
+  color: #000; /* Черный цвет курсора */
+  vertical-align: middle; /* Убираем избыточное позиционирование */
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.button {
+  width: 25%;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #000;
+  background: #bbb5b5;
+  font-size: 18px;
+}
+
+.button.operator {
+  background: #d3d3d3;
+}
+
+.button.equal {
+  background: #61d674;
+}
+
+.button.clear {
+  background: #ff6666;
+}
+
+.button.plus {
+  background: #66b3ff;
+}
+
+.button.minus {
+  background: #ffcc66;
+}
+
+@keyframes cursorBlink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
